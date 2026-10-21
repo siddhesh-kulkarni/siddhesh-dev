@@ -1,54 +1,54 @@
 # 🚀 Siddhesh Kulkarni — Developer Portfolio
 
-A modern, high-performance developer portfolio built with **Next.js 15**, **TypeScript**, **Tailwind CSS**, **Three.js**, **Framer Motion**, and **GSAP**.
-
-This portfolio showcases my experience, projects, technical skills, and professional journey through immersive animations and interactive UI.
+A modern, high-performance developer portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP, and Three.js. It highlights my work, experience, skills, and projects through immersive visuals and a polished, responsive interface.
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-- ⚡ Built with Next.js 15
-- 🎨 Modern UI with Tailwind CSS
-- 🎬 Smooth animations using Framer Motion & GSAP
-- 🌍 Interactive 3D graphics with React Three Fiber
-- 📱 Fully Responsive Design
-- 🌙 Dark Theme
-- 🚀 Optimized Performance
-- 🔍 SEO Friendly
-- 🎯 Accessible UI
-- 💼 Professional Project Showcase
+- ⚡ Built with Next.js 13 and React 18
+- 🎨 Clean, modern UI styled with Tailwind CSS
+- 🎬 Smooth motion effects using Framer Motion and GSAP
+- 🌐 Interactive 3D visuals with Three.js, React Three Fiber, and Drei
+- 📱 Fully responsive experience across devices
+- 🌙 Dark-themed, immersive portfolio design
+- 📄 Resume download available directly from the UI
+- 🧩 Contact form and portfolio sections for projects, skills, and experience
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
+- Next.js 13.5.1
+- React 18
+- TypeScript 5
+- Tailwind CSS 3
 
-- Next.js 15
-- React
-- TypeScript
-- Tailwind CSS
-
-### Animation
-
+### Animation & Motion
 - Framer Motion
 - GSAP
+- Lenis
 
-### 3D
-
+### 3D & Visuals
 - Three.js
 - React Three Fiber
 - Drei
 
-### Icons
-
+### UI & Utilities
+- Radix UI primitives
 - Lucide React
 - React Icons
+- clsx / tailwind-merge
+
+### Backend / Integrations
+- Next.js API routes
+- Supabase
+- Zod + React Hook Form
 
 ---
 
-## 📂 Sections
+## 📂 Portfolio Sections
 
 - Home
 - About
@@ -60,7 +60,7 @@ This portfolio showcases my experience, projects, technical skills, and professi
 
 ---
 
-## 🚀 Projects
+## 🚀 Projects Featured
 
 - GrowGrape AI
 - QR Pay Manager
@@ -72,17 +72,8 @@ This portfolio showcases my experience, projects, technical skills, and professi
 
 ```bash
 git clone https://github.com/siddhesh-kulkarni/siddhesh-dev.git
-```
-
-```bash
 cd siddhesh-kulkarni-portfolio
-```
-
-```bash
 npm install
-```
-
-```bash
 npm run dev
 ```
 
@@ -96,7 +87,13 @@ npm run build
 
 ---
 
-## 👨‍💻 Author
+## 📄 Resume
+
+The resume is available in the public folder and can be downloaded directly from the portfolio UI.
+
+---
+
+## 👨‍💻 About Me
 
 **Siddhesh Kulkarni**
 
@@ -106,13 +103,11 @@ Full Stack Developer
 
 ---
 
-## 📬 Connect With Me
+## 📬 Connect
 
-LinkedIn
-
-GitHub
-
-Email
+- LinkedIn
+- GitHub
+- Email
 
 ---
 

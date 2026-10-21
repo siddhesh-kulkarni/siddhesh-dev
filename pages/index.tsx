@@ -15,11 +15,12 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{`${PERSONAL_INFO.name} — ${PERSONAL_INFO.role}`}</title>
+        <title>{`${PERSONAL_INFO.name}`}</title>
         <meta name="description" content={PERSONAL_INFO.bio} />
-        <meta name="keywords" content="Siddhesh Kulkarni, Full Stack Developer, React, Next.js, TypeScript, Web Developer, Portfolio" />
+        <meta name="keywords" content="Siddhesh Kulkarni, Full Stack Developer, React, Next.js, Node.js, PostgreSQL, ONDC, BharatGo, Pune, Portfolio" />
         <meta name="author" content={PERSONAL_INFO.name} />
         <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/siddhesh_dev.png" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />

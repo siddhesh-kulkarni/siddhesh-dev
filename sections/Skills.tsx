@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionWrapper, { SectionHeading } from '@/components/SectionWrapper';
 import { SKILL_CATEGORIES } from '@/constants';
-import { fadeUp, easeOutExpo } from '@/utils/animations';
+import { easeOutExpo } from '@/utils/animations';
+import { getTechIcon } from '@/utils/techIcons';
 import type { SkillCategory } from '@/types';
 
 export default function Skills(): JSX.Element {
@@ -15,7 +16,7 @@ export default function Skills(): JSX.Element {
       <SectionHeading
         label="Skills"
         title="Technologies I work with"
-        description="A comprehensive toolkit honed across multiple production projects — from frontend frameworks to cloud infrastructure."
+        description="Tools I use daily across SaaS platforms, PWAs, mobile apps, and AWS deployments."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -82,7 +83,9 @@ export default function Skills(): JSX.Element {
               className="p-8 rounded-3xl glass gradient-border"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {currentCategory.skills.map((skill, i) => (
+                {currentCategory.skills.map((skill, i) => {
+                  const Icon = getTechIcon(skill.name);
+                  return (
                   <motion.div
                     key={skill.name}
                     initial={{ opacity: 0, x: -10 }}
@@ -90,7 +93,8 @@ export default function Skills(): JSX.Element {
                     transition={{ delay: i * 0.06, ease: easeOutExpo }}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-text-primary">
+                      <span className="inline-flex items-center gap-2 text-sm font-medium text-text-primary">
+                        <Icon className="w-4 h-4 text-cyan-400 shrink-0" aria-hidden />
                         {skill.name}
                       </span>
                       <span className="text-xs font-mono text-text-muted">
@@ -106,7 +110,8 @@ export default function Skills(): JSX.Element {
                       />
                     </div>
                   </motion.div>
-                ))}
+                  );
+                })}
               </div>
             </motion.div>
           </AnimatePresence>

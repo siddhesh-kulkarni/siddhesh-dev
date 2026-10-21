@@ -1,9 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Github, Linkedin, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 import SectionWrapper, { SectionHeading } from '@/components/SectionWrapper';
 import { PERSONAL_INFO, CONTACT_METHODS } from '@/constants';
-import { fadeUp, staggerContainer, viewportOnce, easeOutExpo } from '@/utils/animations';
+import { fadeUp, staggerContainer, viewportOnce } from '@/utils/animations';
 import type { ContactMethod } from '@/types';
 
 type FormStatus = 'idle' | 'sending' | 'sent';
@@ -52,8 +52,9 @@ export default function Contact(): JSX.Element {
               Get in touch
             </h3>
             <p className="text-text-secondary leading-relaxed mb-8">
-              I&apos;m currently {PERSONAL_INFO.available ? 'available' : 'unavailable'} for freelance
-              opportunities and full-time roles. Let&apos;s discuss how I can help bring your product to life.
+              Based in {PERSONAL_INFO.location}. I&apos;m currently{' '}
+              {PERSONAL_INFO.available ? 'open' : 'unavailable'} to opportunities in full-stack product
+              work — SaaS, payments, and AI-powered platforms. Reach out anytime.
             </p>
           </motion.div>
 

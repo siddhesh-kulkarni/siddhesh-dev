@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import SectionWrapper, { SectionHeading } from '@/components/SectionWrapper';
 import { PROJECTS } from '@/constants';
 import { fadeUp, staggerContainer, viewportOnce } from '@/utils/animations';
+import { getTechIcon } from '@/utils/techIcons';
 import type { Project } from '@/types';
 
 export default function Projects(): JSX.Element {
@@ -14,7 +15,7 @@ export default function Projects(): JSX.Element {
       <SectionHeading
         label="Work"
         title="Selected projects"
-        description="A curated selection of products I've built — from real-time SaaS dashboards to AI-powered applications."
+        description="Selected work spanning AI for agriculture, UPI payments for local shops, and real-time satellite tracking."
       />
 
       {/* Featured Projects */}
@@ -67,19 +68,22 @@ export default function Projects(): JSX.Element {
 
               {/* Tech */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 rounded-md text-2xs font-mono glass text-text-secondary"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {project.technologies.map((tech) => {
+                  const Icon = getTechIcon(tech);
+                  return (
+                    <span
+                      key={tech}
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-2xs font-mono glass text-text-secondary"
+                    >
+                      <Icon className="w-3 h-3 text-cyan-400 shrink-0" aria-hidden />
+                      {tech}
+                    </span>
+                  );
+                })}
               </div>
 
-              {/* Link */}
               <div className="flex items-center gap-2 text-sm font-medium text-cyan-400 group-hover:gap-3 transition-all">
-                <span>View case study</span>
+                <span>Featured project</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
               </div>
             </div>

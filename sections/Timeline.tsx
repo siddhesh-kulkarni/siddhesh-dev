@@ -23,7 +23,7 @@ export default function Timeline(): JSX.Element {
       <SectionHeading
         label="Journey"
         title="The road so far"
-        description="Key milestones that shaped my career — from education to professional achievements."
+        description="From electronics and computer science to SaaS, payments, and AI products in production."
       />
 
       <motion.div

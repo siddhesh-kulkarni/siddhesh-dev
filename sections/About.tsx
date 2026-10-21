@@ -28,24 +28,25 @@ export default function About(): JSX.Element {
       <SectionHeading
         label="About"
         title="The developer behind the code"
-        description="I build things for the web with a focus on performance, accessibility, and beautiful design."
+        description="I build production SaaS platforms, payment systems, and AI-powered tools with end-to-end ownership."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Bio */}
         <motion.div variants={fadeUp} className="space-y-6">
           <p className="text-lg text-text-secondary leading-relaxed">
-            I&apos;m a {PERSONAL_INFO.role.toLowerCase()} based in {PERSONAL_INFO.location}, specializing in
- building scalable, performant web applications from concept to deployment.
+            I&apos;m a {PERSONAL_INFO.role.toLowerCase()} based in {PERSONAL_INFO.location}, with hands-on
+            experience building and maintaining a multi-tenant SaaS platform from React and Next.js frontends
+            to Node.js, PostgreSQL, payments, and AWS deployments.
           </p>
           <p className="text-lg text-text-secondary leading-relaxed">
-            My journey started with a curiosity for how things work on the internet. Today, I architect
-            full-stack solutions with React, Next.js, and TypeScript — focusing on creating experiences
-            that are not just functional, but delightful to use.
+            At BharatGo, I work across ONDC commerce integration, PhonePe payments, Mobile POS with Bluetooth
+            printers, and release management coordinating deployments and resolving production issues with
+            direct customer support.
           </p>
           <p className="text-lg text-text-secondary leading-relaxed">
-            When I&apos;m not coding, you&apos;ll find me exploring new frameworks, contributing to open source,
-            or experimenting with creative web animations and 3D graphics.
+            Outside work, I build products like GrowGrape.AI for farmers and QR Pay Manager for local shops,
+            and I hold an M.Sc. in Computer Science from Sangameshwar College, Solapur (CGPA 9.36).
           </p>
 
           {/* Values */}

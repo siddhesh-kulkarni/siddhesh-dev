@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown, Download, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '@/constants';
 import { fadeUp, staggerContainer, easeOutExpo } from '@/utils/animations';
 
@@ -20,7 +20,7 @@ export default function Hero(): JSX.Element {
           {/* Badge */}
           <motion.div
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full glass gradient-border"
+            className="inline-flex mt-10 items-center gap-2 px-4 py-2 mb-8 rounded-full glass gradient-border"
           >
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
             <span className="text-xs font-mono uppercase tracking-[0.15em] text-text-secondary">
@@ -62,6 +62,17 @@ export default function Hero(): JSX.Element {
             >
               <span className="relative z-10">View My Work</span>
               <ArrowDown className="w-4 h-4 relative z-10 group-hover:translate-y-0.5 transition-transform" />
+            </motion.a>
+
+            <motion.a
+              href="/Siddhesh_Kulkarni_Resume.pdf"
+              download="Siddhesh_Kulkarni_Resume.pdf"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 text-cyan-300 font-medium text-sm transition-all hover:bg-cyan-500/20"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
             </motion.a>
 
             <motion.a

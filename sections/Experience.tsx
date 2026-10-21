@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Calendar, ChevronRight } from 'lucide-react';
 import SectionWrapper, { SectionHeading } from '@/components/SectionWrapper';
 import { EXPERIENCES } from '@/constants';
-import { fadeUp, easeOutExpo } from '@/utils/animations';
+import { easeOutExpo } from '@/utils/animations';
+import { getTechIcon } from '@/utils/techIcons';
 import type { Experience } from '@/types';
 
 export default function Experience(): JSX.Element {
@@ -15,7 +16,7 @@ export default function Experience(): JSX.Element {
       <SectionHeading
         label="Experience"
         title="Where I've made an impact"
-        description="A timeline of professional roles where I've shipped products, optimized systems, and grown as an engineer."
+        description="Roles where I've shipped SaaS features, payments, POS systems, and live client web applications."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -125,15 +126,21 @@ export default function Experience(): JSX.Element {
                   Tech Stack
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {activeExperience.technologies.map((tech) => (
-                    <motion.span
-                      key={tech}
-                      variants={fadeUp}
-                      className="px-3 py-1.5 rounded-full text-xs font-mono glass glass-hover text-text-secondary transition-all"
-                    >
-                      {tech}
-                    </motion.span>
-                  ))}
+                  {activeExperience.technologies.map((tech, i) => {
+                    const Icon = getTechIcon(tech);
+                    return (
+                      <motion.span
+                        key={tech}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.05, ease: easeOutExpo }}
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono glass glass-hover text-text-secondary transition-all"
+                      >
+                        <Icon className="w-3.5 h-3.5 text-cyan-400 shrink-0" aria-hidden />
+                        {tech}
+                      </motion.span>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
