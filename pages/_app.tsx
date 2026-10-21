@@ -41,6 +41,10 @@ function PortfolioApp({ Component, pageProps, router }: PortfolioAppProps): Reac
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Siddhesh Kulkarni — Full Stack Developer" />
         <meta name="twitter:description" content="Crafting premium, performant web experiences with modern technology." />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64" />
+        <link rel="apple-touch-icon" href="/siddhesh_dev.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>

@@ -20,7 +20,8 @@ const HomePage: NextPage = () => {
         <meta name="keywords" content="Siddhesh Kulkarni, Full Stack Developer, React, Next.js, Node.js, PostgreSQL, ONDC, BharatGo, Pune, Portfolio" />
         <meta name="author" content={PERSONAL_INFO.name} />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/siddhesh_dev.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
